@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/vote-api
+    password: postgres
+    username: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update

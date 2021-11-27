@@ -1,0 +1,42 @@
+[
+  {
+    "name": "John",
+    "age": 25,
+    "gender": "M",
+    "profession": "Software developer",
+    "monthlyIncome": 9000,
+    "voteForJohn": true
+  },
+  {
+    "name": "Mary",
+    "age": 32,
+    "gender": "F",
+    "profession": "Nurse",
+    "monthlyIncome": 4500,
+    "voteForJohn": true
+  },
+  {
+    "name": "Paul",
+    "age": 35,
+    "gender": "M",
+    "profession": "Electrical engineer ",
+    "monthlyIncome": 8200,
+    "voteForJohn": false
+  },
+  {
+    "name": "Jackson",
+    "age": 28,
+    "gender": "M",
+    "profession": "Journalist",
+    "monthlyIncome": 5500,
+    "voteForJohn": false
+  },
+  {
+    "name": "Charles",
+    "age": 67,
+    "gender": "F",
+    "profession": "Retiree",
+    "monthlyIncome": 1200,
+    "voteForJohn": false
+  }
+]
