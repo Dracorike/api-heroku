@@ -7,10 +7,7 @@ import com.github.vinicius.voteapi.dtos.BigDecimalRangeDTO;
 import com.github.vinicius.voteapi.dtos.IntegerRangeDTO;
 import com.github.vinicius.voteapi.enums.GenderEnum;
 import com.github.vinicius.voteapi.services.AcceptanceAndRejectionService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
@@ -27,18 +24,18 @@ public class AcceptanceAndRejectionController {
   }
 
   @GetMapping("by-age")
-  public AcceptanceAndRejectionByAgeGroupDTO getByAgeGroup(@Valid IntegerRangeDTO ageGroup) {
+  public AcceptanceAndRejectionByAgeGroupDTO getByAgeGroup(@Valid @RequestBody IntegerRangeDTO ageGroup) {
     return this.service.getByAgeGroup(ageGroup);
   }
 
-  @GetMapping("by-gender")
-  public AcceptanceAndRejectionByGenderDTO getByAgeGroup(@Valid @NotEmpty String gender) {
+  @GetMapping("by-gender/{gender}")
+  public AcceptanceAndRejectionByGenderDTO getByAgeGroup(@PathVariable @Valid @NotEmpty String gender) {
     GenderEnum genderEnum = GenderEnum.getByGenderLetter(gender);
     return this.service.getByGender(genderEnum);
   }
 
   @GetMapping("by-salary-range")
-  public AcceptanceAndRejectionBySalaryRangeDTO getBySalaryRange(@Valid BigDecimalRangeDTO salaryRange) {
+  public AcceptanceAndRejectionBySalaryRangeDTO getBySalaryRange(@Valid @RequestBody BigDecimalRangeDTO salaryRange) {
     return this.service.getBySalaryRange(salaryRange);
   }
 

@@ -4,8 +4,8 @@ services:
     image: postgres:latest
     environment:
       - POSTGRES_DB=vote-api
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=pedro
+      - POSTGRES_PASSWORD=136279804
     expose:
       - "5432"
     ports:
