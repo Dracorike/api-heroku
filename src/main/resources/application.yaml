@@ -1,10 +1,10 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/vote-api
-    password: 136279804
-    username: pedro
+    url: ${JDBC_DATABASE_URL}
 
   jpa:
+    show-sql: true
+    generate-ddl: true
     hibernate:
       ddl-auto: update
